@@ -15,8 +15,8 @@ extension NSObject {
     }
     
     /** ---------------------------------------------- **
-    * @name Object Mapping Methods
-    ** ---------------------------------------------- **/
+     * @name Object Mapping Methods
+     ** ---------------------------------------------- **/
     
     func mts_setValue(value: AnyObject!, forKey: String!) {
         
@@ -27,8 +27,8 @@ extension NSObject {
     }
     
     /** ---------------------------------------------- **
-    * @name Configure Object Mapping
-    ** ---------------------------------------------- **/
+     * @name Configure Object Mapping
+     ** ---------------------------------------------- **/
     
     class func mts_mapping() -> [NSString : AnyObject] {
         // Subclasses may override
@@ -42,8 +42,8 @@ extension NSObject {
     }
     
     /** ---------------------------------------------- **
-    * @name Automatic Validation
-    ** ---------------------------------------------- **/
+     * @name Automatic Validation
+     ** ---------------------------------------------- **/
     
     class func mts_arrayClassMapping() -> [NSString : AnyObject] {
         // Subclasses might override.

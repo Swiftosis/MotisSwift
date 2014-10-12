@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.testMotis()
+        
         return true
     }
 
@@ -41,6 +43,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // ----- Testing Motis ----- //
+    
+    func testMotis() {
+        let JSONDict = [
+            "user_name":"John",
+            "user_id": 42,
+            "followers_count":856,
+        ]
+        
+        let user = User()
+        
+        user.mts_setValuesForKeysWithDictionary(JSONDict)
+    }
 
 }
 
