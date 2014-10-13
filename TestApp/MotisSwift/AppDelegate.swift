@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // ----- Testing Motis ----- //
     
     func testMotis() {
-        let JSONDict = [
+        let JSONDict : Dictionary = [
             "user_name":"John",
             "user_id": 42,
             "followers_count":856,

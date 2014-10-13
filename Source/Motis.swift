@@ -9,59 +9,52 @@
 import Foundation
 
 extension NSObject {
-    
-    func foo() {
-        var object = NSDate()
-    }
-    
     /** ---------------------------------------------- **
      * @name Object Mapping Methods
      ** ---------------------------------------------- **/
     
-    func mts_setValue(value: AnyObject!, forKey: String!) {
+    func mts_setValue(value: AnyObject!, forKey: String!)
+    {
+        var motisValue : AnyObject! = value
         
+        let optionalMappedKey : String? = self.mts_mapKey(forKey);
+        
+        if let mappedKey = optionalMappedKey
+        {
+            if value is NSNull
+            {
+                motisValue = nil
+            }
+            
+            let error : NSErrorPointer = nil
+            //self.mts_validateValue(<#TODO#>, forKey: forKey, error: error)
+            
+            
+            
+            self.setValue(value, forKey: mappedKey);
+        }
+        else
+        {
+            self.mts_ignoredSetValue(value, forUndefinedMappingKey: forKey)
+        }
     }
     
-    func mts_setValuesForKeysWithDictionary(keyedValues: [NSObject : AnyObject]!) {
-        
+    func mts_setValuesForKeysWithDictionary(keyedValues: [String : AnyObject!])
+    {
+        // Keypath access not supported!
+        for (key, value) in keyedValues
+        {
+            self.mts_setValue(value, forKey:key)
+        }
     }
     
     /** ---------------------------------------------- **
-     * @name Configure Object Mapping
+     * @name Private Methods
      ** ---------------------------------------------- **/
     
-    class func mts_mapping() -> [NSString : AnyObject] {
-        // Subclasses may override
-        return [:];
+    func mts_mapKey(key: String) -> String?
+    {
+        // TODO
+        return nil
     }
-    
-    class func mts_shouldSetUndefinedKeys() -> Bool {
-        // Subclasses may override
-        let mapping = self.mts_mapping()
-        return mapping.count == 0;
-    }
-    
-    /** ---------------------------------------------- **
-     * @name Automatic Validation
-     ** ---------------------------------------------- **/
-    
-    class func mts_arrayClassMapping() -> [NSString : AnyObject] {
-        // Subclasses might override.
-        return [:];
-    }
-    
-    func mts_willCreateObject(ofClass: AnyClass, dictionary: [NSString:AnyObject], forKey: NSString) -> AnyObject! {
-        // Subclasses might override
-        return nil;
-    }
-    
-    func mts_didCreateObject(object: AnyObject, forKey: NSString) {
-        // Subclasses might override
-    }
-    
-    class func mts_validationDateFormatter() -> NSDateFormatter! {
-        return nil;
-    }
-    
-    
 }

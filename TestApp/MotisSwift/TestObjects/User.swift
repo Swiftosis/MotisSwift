@@ -20,9 +20,9 @@ class User : NSObject {
     var username : NSString;
     var followersCount : NSInteger;
     
-    override class func mts_mapping() -> [NSString:AnyObject] {
+    override class func mts_mapping() -> [String : String] {
         return [
-            "user_id":"userId",
+            "user_id": "userId",
             "user_name": "username",
             "followers_count": "followersCount"
         ];

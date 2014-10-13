@@ -15,6 +15,7 @@
 		D2015D5B19EA6A3E0022CAF6 /* MotisSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2015D5A19EA6A3E0022CAF6 /* MotisSwiftTests.swift */; };
 		D2015D6819EA7BF00022CAF6 /* Motis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2015D6719EA7BF00022CAF6 /* Motis.swift */; };
 		D2015D6B19EA7D410022CAF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2015D6A19EA7D410022CAF6 /* User.swift */; };
+		D2A9D6AE19EAC02400E88635 /* MotisSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9D6AD19EAC02400E88635 /* MotisSubclass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D2015D5A19EA6A3E0022CAF6 /* MotisSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotisSwiftTests.swift; sourceTree = "<group>"; };
 		D2015D6719EA7BF00022CAF6 /* Motis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Motis.swift; path = ../../Source/Motis.swift; sourceTree = "<group>"; };
 		D2015D6A19EA7D410022CAF6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = TestObjects/User.swift; sourceTree = "<group>"; };
+		D2A9D6AD19EAC02400E88635 /* MotisSubclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotisSubclass.swift; path = ../../Source/MotisSubclass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D2015D6719EA7BF00022CAF6 /* Motis.swift */,
+				D2A9D6AD19EAC02400E88635 /* MotisSubclass.swift */,
 			);
 			name = Motis;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A9D6AE19EAC02400E88635 /* MotisSubclass.swift in Sources */,
 				D2015D6B19EA7D410022CAF6 /* User.swift in Sources */,
 				D2015D4719EA6A3E0022CAF6 /* ViewController.swift in Sources */,
 				D2015D6819EA7BF00022CAF6 /* Motis.swift in Sources */,
